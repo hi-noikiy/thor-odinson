@@ -1,0 +1,16 @@
+@import '../../styles/variables';
+.empty-state {
+  @apply flex flex-col items-center justify-center text-center w-full;
+  > * {
+    @apply mt-1;
+  }
+  .empty-state-title {
+    @apply font-normal;
+    margin-top: 0.3rem;
+    font-size: 0.36rem;
+    color: #9DA6BC;
+  }
+  .empty-state-action {
+    margin-top: 0.7rem;
+  }
+}

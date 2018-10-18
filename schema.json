@@ -1,0 +1,83 @@
+{
+  "name": "shansong",
+  "version": "1.0",
+  "templates": {
+    "CustomerPage": {
+      "__displayName": "自定义页面",
+      "__description": "",
+      "components": {
+        "__displayName": "添加组件",
+        "__description": "添加的内容会按顺序展示在页面中",
+        "__repeated": true,
+        "__type": 10,
+        "__typeName": "shansong.allComponents"
+      }
+    }
+  },
+  "components": {
+    "shansong.allComponents": {
+      "type": {
+        "__type": 10,
+        "__displayName": "选择组件类型",
+        "__oneOfItems": {
+          "Image": {
+            "__displayName": "图片",
+            "__type": 10,
+            "__typeName": ".xrc.ecnova.marketplace.type.TemplateProp.Type.Image"
+          },
+          "ImageLink": {
+            "__displayName": "图片链接",
+            "__type": 10,
+            "__typeName": ".xrc.ecnova.marketplace.type.TemplateProp.Type.ImageLink"
+          },
+          "Products": {
+            "__displayName": "商品",
+            "__type": 10,
+            "__typeName": "ProductProvider"
+          },
+          "BuyButton": {
+            "__displayName": "购买按钮",
+            "__type": 10,
+            "__typeName": "BuyButton"
+          }
+        }
+      }
+    },
+    "BuyButton": {
+      "show": {
+        "__displayName": "显示按钮",
+        "__type": 7
+      },
+      "productId": {
+        "__displayName": "商品 ID",
+        "__type": 8
+      }
+    },
+    "ProductProvider": {
+      "source": {
+        "__displayName": "商品来源",
+        "__type": 10,
+        "__oneOfItems": {
+          "products": {
+            "__displayName": "商品 ID",
+            "__description": "产品会以列表形式被展示在页面中",
+            "__type": 10,
+            "__typeName": ".xrc.ecnova.marketplace.type.TemplateProp.Type.ProductsList"
+          },
+          "collection": {
+            "__displayName": "通过精选集添加一组产品",
+            "__description": "产品会以列表形式被展示在页面中",
+            "__type": 10,
+            "__typeName": ".xrc.ecnova.marketplace.type.TemplateProp.Type.Collection"
+          },
+          "productType": {
+            "__displayName": "添加一个产品分类",
+            "__description": "产品会以列表形式被展示在页面中",
+            "__type": 10,
+            "__typeName": ".xrc.ecnova.marketplace.type.TemplateProp.Type.ProductType"
+          }
+        }
+      }
+    }
+  }
+}

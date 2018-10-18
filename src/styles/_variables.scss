@@ -1,0 +1,42 @@
+$blue: #009EFF;
+$blue1: #048DF5;
+$black: #3C3D45;
+$black1: #50555F;
+$gray: #73757F;
+$gray1: #778095;
+$gray2: #9DA6BC;
+$gray3: #D0D4DF;
+$gray4: #F1F2F4;
+$gray5: #C4C9D5;
+$gray6: #C0BECD;
+$gray7: #FBFBFB;
+
+$red: #F23B44;
+$yellow: #F58704;
+$yellow-gradient: linear-gradient(31deg, #FFAF00 0%, #FF8C02 100%);
+$backdrop: rgba(black, .17);
+
+$font-size-small: 12px;
+$font-size-normal: 14px;
+$font-size-regular: 16px;
+$font-size-large:	18px;
+$font-size-x-large:	22px;
+$font-size-xx-large: 24px;
+$font-size-xxx-large: 32px;
+$font-size-xxxx-large: 48px;
+
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 600;
+
+$zindex: (
+  modal: 10000,
+  overlay-content: 6000,
+  backdrop: 5000,
+  header: 7000,
+  tabbar: 8000,
+  checkout-bar: 4000,
+);
+
+$navbar-visible: 'body.navbar-visible';

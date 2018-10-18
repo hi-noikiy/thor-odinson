@@ -1,0 +1,44 @@
+@mixin page-container {
+  min-height: 100%;
+}
+
+@mixin scroll-page-container {
+  @apply h-full overflow-auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@mixin divider {
+  @apply relative;
+  &::after{
+    content: " ";
+    left: 0;
+    height: 1px;
+    background-color: $gray3;
+    opacity: .4;
+  }
+}
+
+@mixin divider-bottom {
+  @include divider;
+  &::after {
+    @apply absolute pin-r pin-b;
+  }
+}
+
+@mixin divider-top {
+  @include divider;
+  &::after {
+    @apply absolute pin-r pin-t;
+  }
+}
+
+@mixin img-loop-nogap {
+  font-size: 0;
+  vertical-align: top;
+}
+
+@mixin touch-feedback {
+  &:active {
+    opacity: 0.86;
+  }
+}

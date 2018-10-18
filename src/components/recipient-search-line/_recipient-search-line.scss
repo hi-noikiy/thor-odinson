@@ -1,0 +1,20 @@
+.recipient-search-item {
+  padding: .4rem;
+  border-bottom: 1px solid rgba(157, 166, 188, 0.3);
+
+  &:first-child {
+    border-top: 1px solid rgba(157, 166, 188, 0.3);
+  }
+
+  .title{
+    line-height: 26px;
+    color: #484848;
+    font-size: $font-size-regular;
+    font-weight: $font-weight-medium;
+  }
+
+  .desc {
+    color: $gray2;
+    line-height: 20px;
+  }
+}

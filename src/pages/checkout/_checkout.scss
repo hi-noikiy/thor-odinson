@@ -1,0 +1,197 @@
+
+.checkout-container {
+  @apply overflow-y-scroll bg-white;
+  box-sizing: border-box;
+  .tip-area {
+    @apply w-screen flex flex-col justify-center;
+    background: $blue;
+    height: 50px;
+    box-sizing: border-box;
+    padding-left: .5rem;
+    h3 {
+      color: #FFFFFF;
+      font-size: .24rem;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    p {
+      color: #FFFFFF;
+      -webkit-text-size-adjust: none;
+      font-size: .2rem;
+    }
+  }
+  .divider {
+    height: 10px;
+    width: 100%;
+    background: #F4F6F8;
+  }
+  .list-item {
+    @include divider-bottom;
+    @apply flex items-center;
+    min-height: .88rem;
+    padding-left: .4rem;
+    font-size: .28rem;
+  }
+  .recipient {
+    min-height: 1.28rem;
+    color: #3C3D45;
+    .icon-location,
+    .icon-chevron {
+      @apply flex;
+    }
+    .icon-location {
+      margin-right: .2rem;
+      color: #048DF5;
+      font-size: .4rem;
+    }
+    .icon-chevron {
+      color: #D0D4DF;
+      margin-right: .4rem;
+    }
+    .empty {
+      margin-right: auto;
+      color: inherit;
+    }
+    .info {
+      @apply flex flex-col;
+      padding: .25rem 0;
+      padding-right: .4rem;
+      line-height: 0.4rem;
+      margin-right: auto;
+      color: inherit;
+    }
+  }
+  .fees {
+    background: #FFFFFF;
+    .list-item {
+      color: #50555F;
+      padding-right: .4rem;
+    }
+    .shipping {
+      label {
+        @apply flex items-center;
+        color: $blue;
+        .icon {
+          @apply flex items-center;
+          font-size: .3rem;
+          margin-left: .04rem;
+        }
+      }
+      .loading-icon {
+        @apply flex;
+        > svg path {
+          animation: blink .5s;
+          animation-timing-function: steps(8, end);
+          animation-fill-mode: both;
+          animation-iteration-count: infinite;
+          @for $i from 1 through 8 {
+            &:nth-child(#{$i}) {
+              animation-delay: 0.0625s * $i;
+            }
+          }
+        }
+      }
+    }
+    label {
+      margin-right: auto;
+    }
+  }
+  .remarks {
+    color: #50555F;
+    padding-top: .3rem;
+    padding-bottom: .3rem;
+    label {
+      @apply flex self-stretch;
+      width: 1.52rem;
+    }
+    .input {
+      width: 4.1rem;
+      overflow: hidden;
+      outline: none;
+      word-wrap: break-word;
+      height: 100%;
+    }
+    .remarks-placeholder {
+      @apply absolute;
+      left: 1.92rem;
+      color: #B7B9BD;
+    }
+    .clear-icon {
+      @apply absolute;
+      right: .4rem;
+      color: #9DA6BC;
+      font-size: .3rem;
+    }
+    /* &.big-bottom {
+      margin-bottom: 100px;
+    } */
+  }
+}
+.list-item {
+  @include divider-bottom;
+  @apply flex items-center;
+  min-height: .88rem;
+  padding-left: .4rem;
+  font-size: .28rem;
+}
+.modal-menu-item {
+  @apply relative;
+  height: 1.4rem;
+  font-size: .32rem;
+  margin-right: auto;
+  .icon {
+    font-size: .4rem;
+    margin-right: .26rem;
+  }
+  &.ali {
+    .icon {
+      color: #2AA4FF;
+    }
+  }
+  &.wechat {
+    .icon {
+      color: #15B51A;
+    }
+  }
+  .checkbox-wrap {
+    @apply absolute;
+    right: .74rem;
+  }
+}
+.btn-wrap {
+  height: 1.7rem;
+  padding: .5rem .5rem .3rem;
+}
+
+.checkout-and-pay {
+  @apply fixed pin-b pin-l w-screen flex;
+  font-size: .3rem;
+  height: 1rem;
+  color: #50555F;
+  z-index: 1000;
+  .text {
+    @apply flex flex-grow items-center;
+    height: inherit;
+    box-sizing: border-box;
+    padding-left: .4rem;
+    background-color: $gray4;
+    .price {
+      color: $yellow;
+    }
+  }
+  .btn {
+    width: 3.2rem;
+    height: inherit;
+    color: #FFFFFF;
+    background-color: $blue;
+    outline: none;
+    &.disabled {
+      background: #CED0D6;
+    }
+  }
+}
+
+
+body.has-checkout-and-pay {
+  padding-bottom: 1rem;
+}

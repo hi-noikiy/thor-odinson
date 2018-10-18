@@ -1,0 +1,14 @@
+.checkbox {
+  @apply inline-flex items-center;
+
+  font-size: .4rem;
+  .label {
+    font-size: .28rem;
+    margin-left: 10px;
+    color: $gray1;
+  }
+  color: $gray2;
+  &.checkbox-checked {
+    color: $blue;
+  }
+}

@@ -1,0 +1,50 @@
+.floating-text-field {
+  @apply relative flex flex-col;
+  overflow: hidden;
+  padding: 0 0.4rem;
+  height: 1.32rem;
+  border-bottom: 1px solid rgba(#c0becd, .3);
+
+  > label {
+    @apply absolute pin-l;
+    left: .4rem;
+    top: 0.5rem;
+    z-index: 100;
+    color: $gray1;
+    font-size: 0.32rem;
+    transition: all 0.25s;
+  }
+  .lable-small {
+    top: 0.24rem;
+    font-size: 0.24rem;
+  }
+  .err {
+    color: red;
+  }
+  .fli-input-wrapper {
+    @apply flex;
+    input {
+      flex: 5;
+      color: $gray1;
+    }
+    &:last-child {
+      flex: 1;
+      padding-right: 0.2rem;
+    }
+  }
+  &:first-child {
+    margin-top: 20rpx;
+  }
+  input {
+    outline: none;
+    font-size: 0.32rem;
+    margin-top: 0.28rem;
+  }
+  .icon-close-show {
+    @apply flex;
+    align-items: center;
+  }
+  .icon-close-hidden {
+    display: none;
+  }
+}

@@ -1,0 +1,6 @@
+export * from './help-center'
+export * from './qa'
+export * from './after-sale'
+export * from './invoice'
+export * from './shipping'
+export * from './service-policy'

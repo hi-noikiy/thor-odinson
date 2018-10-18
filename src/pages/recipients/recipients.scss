@@ -1,0 +1,61 @@
+.recipients {
+  @apply overflow-auto;
+  margin-bottom: 1.68rem;
+  .no-recipient {
+    @apply flex flex-col;
+    background-color: #F4F6F8;
+    align-items: center;
+    padding-top: 1.58rem;
+    color: $gray2;
+    font-size: .3rem;
+    img {
+      width: 3rem;
+      height: 3rem;
+      margin-bottom:.2rem;
+    }
+  }
+  .recipient-line {
+    @apply flex bg-white;
+    padding: 0.4rem;
+    border-bottom: 1px solid #D9DBE2;
+    .recipient-line-address {
+      flex: 8;
+      padding-left: 0.2rem;
+      padding-right: 0.2rem;
+      line-height: 1.5;
+      span {
+        padding-right: 0.2rem;
+        &.is-default {
+          background-color: #048df5;
+          padding: 0.04rem 0.08rem;
+          border-radius: 2px;
+          color: #fff;
+        }
+      }
+    }
+    .recipient-line-edit {
+      @apply flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .to-create-recipient-link {
+    @apply fixed;
+    width: 100%;
+    bottom: 0.3rem;
+    .create-recipient-button {
+      width: 80%;
+      margin: 0 auto;
+    }
+  }
+  .bottom-container {
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: .3rem;
+    height: 2.3rem;
+    background-image: linear-gradient(-180deg, rgba(255, 255, 255, 0) 19%, #fff 50%);
+    width: 100%;
+  }
+}

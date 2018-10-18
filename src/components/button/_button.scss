@@ -1,0 +1,13 @@
+.primary-button {
+  @apply flex justify-center items-center rounded-full outline-none h-9 w-full;
+  @apply bg-blue text-white text-lg font-medium;
+
+  &:disabled {
+    @apply bg-blue-lighter;
+  }
+  &:focus {
+    @apply outline-none;
+  }
+
+  @include touch-feedback;
+}

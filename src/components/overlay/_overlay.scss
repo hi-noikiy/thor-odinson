@@ -1,0 +1,44 @@
+@import '../../styles/variables';
+
+.overlay {
+  &.overlay-open {
+    height: 100vh;
+  }
+  .overlay-content {
+    @apply fixed pin-x pin-y;
+    z-index: map-get($zindex, overlay-content);
+  }
+}
+
+body.overlay-open {
+  overflow: hidden;
+}
+
+.backdrop {
+  @apply fixed pin-x pin-y;
+  background-color: $backdrop;
+  z-index: map-get($zindex, backdrop);
+
+  &.backdrop-transparent {
+    background-color: transparent;
+  }
+}
+
+.portal {
+  @apply absolute pin-x pin-t;
+}
+
+.backdrop-enter {
+  transition: all .5s;
+  opacity: 0;
+}
+.backdrop-enter.backdrop-enter-active {
+  opacity: 1;
+}
+.backdrop-exit {
+  transition: all .5s;
+  opacity: 1;
+}
+.backdrop-exit.backdrop-exit-active {
+  opacity: 0;
+}

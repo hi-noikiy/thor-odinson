@@ -1,0 +1,99 @@
+.cart-page {
+  background-color: #fff;
+  .top-actions {
+    @include divider-bottom;
+    @apply flex items-center justify-between;
+    height: 1rem;
+    padding-left: .4rem;
+
+    button {
+      font-size: .28rem;
+      color: #50555F;
+      &:focus {
+        outline: none;
+      }
+      &:active {
+        opacity: .7;
+      }
+    }
+  }
+  .login-badge {
+    display: flex;
+    align-items: center;
+    padding-right: 0.4rem;
+    > img {
+      width: 1.3rem;
+      margin-right: 0.16rem
+    }
+  }
+
+  .shoppingcart-lineitems-list {
+    flex: 1 1 0;
+    overflow: auto;
+    -webkit-overflow-scroll: touch;
+  }
+
+  .img-empty-cart {
+    width: 2.16rem;
+  }
+
+  .empty-bg-container {
+    background-color: #f4f6f8;
+    height: 100%;
+    padding-top: 22.56%;
+  }
+
+  .btn-goto-login {
+    width: 2.2rem;
+  }
+}
+
+.checkout-bar {
+  @apply fixed pin-x w-full;
+  @apply flex items-stretch;
+  z-index: map-get($zindex, checkout-bar);
+  bottom: 1rem;
+  bottom: calc(1rem + env(safe-area-inset-bottom));
+  height: 1rem;
+  background-color: $gray4;
+  .summary {
+    @apply flex items-center;
+    @apply flex-1;
+    padding: 0 .4rem;
+    color: $gray1;
+    font-size: .14rem;s
+    .svg-icon {
+      font-size: .4rem;
+    }
+    .total {
+      color: $yellow;
+      font-size: .3rem;
+      @apply font-medium;
+    }
+  }
+  .btn-checkout {
+    flex: 0 0 3rem;
+    background-color: $blue;
+    font-size: .3rem;
+    line-height: .3rem;
+    color: white;
+    @apply font-medium;
+
+    &:focus {
+      outline: none;
+    }
+    &:not(&:disabled) {
+    }
+    &.btn-red {
+      background-color: $red;
+    }
+    &:disabled {
+      background-color: $gray5;
+    }
+  }
+}
+
+body.has-tabbar.has-checkout-bar {
+  padding-bottom: 2rem;
+  padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+}

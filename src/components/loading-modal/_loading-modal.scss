@@ -1,0 +1,61 @@
+.loading-modal-overlay {
+  @apply relative;
+  z-index: map-get($zindex, modal);
+}
+
+.loading-indicator-overlay {
+  @apply fixed flex-col;
+  top: 24.58%;
+  left: 27.333%;
+  width: 3.4rem;
+  height: 2.1rem;
+  padding: .2rem;
+  background-color: rgba(black, .6);
+  border-radius: 10px;
+  text-align: center;
+
+  @apply flex items-center justify-center;
+
+  > svg {
+    font-size: 30px;
+  }
+  > svg path {
+    animation: blink .5s;
+    animation-timing-function: steps(8, end);
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    @for $i from 1 through 8 {
+      &:nth-child(#{$i}) {
+        animation-delay: 0.0625s * $i;
+      }
+    }
+  }
+  .description {
+    margin-top: 0.24rem;
+    color: white;
+  }
+}
+.loading-indicator-overlay-white {
+  color: white;
+}
+@keyframes blink {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.loading-overlay-enter {
+  opacity: 0;
+}
+.loading-overlay-enter-active {
+  opacity: 1;
+  transition: all .25s;
+}
+
+.loading-overlay-exit {
+  opacity: 1;
+}
+
+.loading-overlay-exit-active {
+  opacity: 0;
+  transition: all .25s;
+}

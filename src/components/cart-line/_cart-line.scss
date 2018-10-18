@@ -1,0 +1,51 @@
+.cart-line {
+  @include divider-bottom;
+  @apply flex items-stretch;
+
+  padding: 20px 0;
+  overflow: hidden;
+
+  .checkbox {
+    @apply flex items-center justify-center;
+    padding: 0 .3rem 0 .4rem;
+    font-size: .4rem;
+    color: $gray1;
+    &.selected {
+      color: $blue;
+    }
+  }
+  .img {
+    flex: 0 0 2.22rem;
+    height: 2.22rem;
+    margin-right: .3rem;
+    overflow: hidden;
+    > img {
+      width: 2.22rem;
+    }
+  }
+  .info {
+    @apply flex-1 flex-no-shrink;
+    @apply flex flex-col items-stretch;
+    padding-right: 0.5rem;
+  }
+  .title {
+    @apply font-medium;
+    height: .38rem * 2;
+    max-height: .72rem;
+    overflow: hidden;
+    color: $black;
+    font-size: .28rem;
+    line-height: .38rem;
+  }
+  .attrs {
+    font-size: .24rem;
+    margin-top: .08rem;
+    color: $gray2;
+  }
+  .price {
+    @apply font-bold;
+    font-size: .3rem;
+    margin-top: .12rem;
+    color: $yellow;
+  }
+}

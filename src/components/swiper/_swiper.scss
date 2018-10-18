@@ -1,0 +1,36 @@
+.swiper-container {
+  @apply relative;
+
+  height: 7.5rem;
+
+  .swiper-cursor {
+    @apply absolute pin-l pin-r text-center;
+
+    bottom: 10px;
+
+    > ul {
+      @apply overflow-hidden;
+      margin: 0 auto;
+
+      > li {
+        @apply float-left;
+
+        overflow: hidden;
+        background: #D8D8D8;
+        border-radius: 100%;
+        
+        &:last-child {
+          margin: 0 !important;
+        }
+        &::after {
+          content: '';
+          clear: both;
+        }
+      }
+    }
+
+    .swiper-cursor-active {
+      background: red;
+    }
+  }
+}

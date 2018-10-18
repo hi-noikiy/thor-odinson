@@ -1,0 +1,32 @@
+.settings-page-container {
+  background: #F4F6F8;
+  height: 100%;
+  .setting-list {
+    .item {
+      @apply flex items-center relative;
+      height: 66px;
+      width: 100%;
+      font-size: .32rem;
+      padding-left: .4rem;
+      background: #FFFFFF;
+      margin-bottom: 10px;
+      span {
+        color: #50555F;
+      }
+      .icon {
+        @apply absolute;
+        right: .4rem;
+        font-size: .2rem;
+        color: #C4C9D5;
+      }
+    }
+  }
+  .sign-out {
+    height: 66px;
+    width: 100%;
+    color: #F23B44;
+    font-size: .32rem;
+    outline: none;
+    background: #FFFFFF;
+  }
+}

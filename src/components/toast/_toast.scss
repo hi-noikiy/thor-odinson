@@ -1,0 +1,28 @@
+.toast-container {
+  @apply fixed text-white;
+  left: 50%;
+  top: 50%;
+  border-radius: 4px;
+  transform: translate(-50%, -50%);
+  padding: .16rem .24rem;
+  background-color: rgba(black, .86);
+  z-index: 7000;
+}
+.toast-transition-enter {
+  opacity: 0;
+  transform: translate(-50%, 50%);
+}
+.toast-transition-enter-active {
+  opacity: 1;
+  transition: .15s;
+  transform: translate(-50%, -50%);
+}
+.toast-transition-exit {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.toast-transition-exit-active {
+  opacity: 0;
+  transition: .15s;
+  transform: translate(-50%, 50%);
+}

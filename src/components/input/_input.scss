@@ -1,0 +1,49 @@
+@import '../../styles/variables';
+.input-container {
+  @apply flex items-center relative overflow-hidden rounded-full;
+  height: 50px;
+  width: 6rem;
+  background: #F1F2F7;
+  .input {
+    @apply flex-grow;
+    font-size: .28rem;
+    padding: 0 .4rem;
+    height: 100%;
+    color: #3C3D45;
+    background: transparent;
+    outline: none;
+    border-radius: 25px;
+    min-width: 0;
+    &::-webkit-input-placeholder {
+      color: #9DA6BC;
+    }
+  }
+  .input-right-element,
+  .input-left-element {
+    @apply relative h-full text-center flex items-center content-center;
+  }
+  // .input-left-element {
+  //   @apply pin-l;
+  // }
+  // .input-right-element {
+  //   @apply pin-r;
+  // }
+  &.small {
+    width: 6.28rem;
+    height: 40px;
+    .input {
+      border-radius: 20px;
+      color: #50555F;
+      background: #f1f2f7;
+      &::-webkit-input-placeholder {
+        color: #C4C9D5;
+      }
+    }
+  }
+  .input-clear {
+    @apply self-center flex;
+    padding-right: .2rem;
+    font-size: .3rem;
+    color: #9DA6BC;
+  }
+}

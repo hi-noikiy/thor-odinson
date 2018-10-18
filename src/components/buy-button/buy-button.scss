@@ -1,0 +1,66 @@
+.buy-button-container {
+  @apply flex fixed pin-l pin-b;
+  width: 100%;
+  height: 2.3rem;
+  background-image: linear-gradient(
+    -180deg,
+    rgba(255, 255, 255, 0) 19%,
+    #ffffff 50%
+  );
+
+  .buy-button {
+    @apply flex absolute pin-l justify-between w-full;
+    padding: 0 0.4rem;
+    bottom: .3rem;
+    height: 0.9rem;
+
+    .icon-btn-cart {
+      @apply flex items-center justify-center bg-white border border-blue rounded-full text-center;
+      box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.15);
+      width: 0.9rem;
+      height: 0.9rem;
+      svg {
+        font-size: 0.38rem;
+        @apply text-blue;
+      }
+    }
+
+    .icon-btn-cart:last-of-type svg {
+      display: inline-block;
+      margin-right: 0.005rem;
+      margin-top: 0.01rem;
+    }
+
+    .actions-group {
+      @apply flex rounded-full;
+      width: 4.6rem;
+      box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      .add-to-cart, .purchase-now {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .add-to-cart {
+        @apply text-center bg-blue text-white;
+        font-size: 0.3rem;
+        font-weight: 400;
+      }
+      .purchase-now {
+        @apply text-center text-white;
+        background-image: linear-gradient(329deg, #ffaf00 0%, #ff8c02 100%);
+        font-size: 0.3rem;
+        font-weight: 400;
+      }
+    }
+    > img {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  .modal {
+    padding: 20px;
+  }
+}

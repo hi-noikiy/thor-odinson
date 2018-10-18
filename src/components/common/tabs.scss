@@ -1,0 +1,53 @@
+.tabs-container {
+  @apply overflow-hidden;
+
+  .tabs {
+    @apply flex flex-row flex-1 bg-white;
+
+    height: 1rem;
+    border-bottom: 1px #F4F6F8 solid;
+    box-sizing: content-box;
+
+    .tab-container {
+      @apply relative;
+
+      .tab {
+        @apply text-center;
+
+        margin: auto;
+        height: 100%;
+        line-height: 1rem;
+        font-size: $font-size-regular;
+      }
+
+      .tab-default {
+        @extend .tab;
+
+        color: $gray1;
+      }
+
+      .tab-active {
+        @extend .tab;
+
+        color: $blue1;
+        box-sizing: border-box;
+        border-bottom: 2px $blue1 solid;
+      }
+    }
+  }
+
+  .tab-pane-container {
+    transition: all .25s;
+  }
+}
+
+.tab-container {
+  @apply overflow-hidden;
+}
+
+.tab-pane {
+  @apply float-left;
+
+  width: 7.5rem;
+  min-height: 1px;
+}

@@ -1,0 +1,33 @@
+.modal {
+  @apply fixed pin-x pin-b;
+  border-top-left-radius: .3rem;
+  border-top-right-radius: .3rem;
+  background-color: #fff;
+}
+
+.modal-transition-container-appear,
+.modal-transition-container-enter {
+  @apply fixed pin-x pin-b;
+  transform: translateY(100%);
+}
+
+.modal-transition-container-appear-active,
+.modal-transition-container-enter-active {
+  transform: translateY(0);
+  transition: transform .5s;
+}
+
+.modal-transition-container-appear-done,
+.modal-transition-container-enter-done {
+  @apply fixed pin-x pin-b;
+}
+
+.modal-transition-container-exit {
+  @apply fixed pin-x pin-b;
+  transform: translateY(0);
+  transition: transform .5s;
+}
+
+.modal-transition-container-exit-active {
+  transform: translateY(100%);
+}

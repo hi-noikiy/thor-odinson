@@ -1,0 +1,127 @@
+.order-page {
+  @apply overflow-y-scroll;
+  -webkit-overflow-scrolling: touch;
+  background: #F4F6F8;
+  height: 100%;
+  box-sizing: border-box;
+  padding-bottom: 80px;
+  &.no-button-group {
+    padding-bottom: 0;
+  }
+  .recipient {
+    margin-top: 10px;
+    background: #FFFFFF;
+    min-height: 1.28rem;
+    color: #3C3D45;
+    .icon-location,
+    .icon-chevron {
+      @apply flex;
+    }
+    .icon-location {
+      margin-right: .2rem;
+      color: #048DF5;
+      font-size: .4rem;
+    }
+    .info {
+      @apply flex flex-col;
+      padding: .25rem 0;
+      padding-right: .4rem;
+      line-height: 0.4rem;
+      margin-right: auto;
+      color: inherit;
+    }
+  }
+  .order-lines {
+    background: #FFFFFF;
+  }
+  .fees-info-list {
+    background: #FFFFFF;
+    padding-bottom: 20px;
+    .list-item {
+      @apply flex items-center;
+      color: #50555F;
+      padding-right: .4rem;
+      label {
+        margin-right: auto;
+      }
+      .remarks-label {
+        margin-right: .4rem;
+      }
+      .remarks {
+        padding: .24rem 0;
+        width: 4.1rem;
+        overflow: hidden;
+        outline: none;
+        word-wrap: break-word;
+        height: 100%;
+      }
+    }
+  }
+  .order-detail-infos {
+    @include divider;
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding: 20px .4rem;
+    background: #FFFFFF;
+    p {
+      @apply relative;
+      height: 14px;
+      line-height: 14px;
+      font-size: 14px;
+      margin-bottom: 10px;
+      &:last-child {
+        margin: 0;
+      }
+      .copy {
+        @apply absolute pin-r flex items-center justify-center;
+        top: 50%;
+        transform: translateY(-50%);
+        border: 1px solid #3C3D45;
+        border-radius: 2px;
+        height: 16px;
+        width: 30px;
+        font-size: 12px;
+      }
+    }
+    .order-id-copy-input {
+      @apply fixed;
+      left: -100%;
+      bottom: 0;
+      opacity: 0;
+    }
+  }
+}
+.one-button {
+  padding: 20px .95rem 15px;
+}
+.bottom-action-buttons {
+  @apply flex fixed pin-l pin-b w-full;
+  box-sizing: border-box;
+  padding: 20px .4rem 15px;
+  background: transparent;
+  .primary-button {
+    height: 45px
+  }
+}
+.bottom-action-buttons {
+    @apply flex fixed pin-l pin-b w-full;
+    box-sizing: border-box;
+    padding: 20px .4rem 15px;
+    background: transparent;
+    .primary-button {
+      height: 45px
+    }
+    .contact-btn {
+      @apply flex items-center justify-center;
+      flex: 0 0 45px;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      background: #FFFFFF;
+      border: 1px solid $blue;
+      box-shadow: 0 10px 20px 0 rgba(0,0,0,0.15);
+      margin-right: .2rem;
+      font-size: .38rem;
+      color: $blue;
+    }
+  }

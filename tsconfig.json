@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "preserveConstEnums": true,
+    "target": "ES6",
+    "module": "commonjs",
+    "jsx": "react",
+    "declaration": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "typeRoots": [
+      "./typings",
+      "node_modules/@types",
+    ]
+  },
+  "exclude": [
+    "node_modules/**/*",
+    "**/__tests__/**/*.*",
+    "**/__stories__/**/*.*",
+  ],
+  "include": [
+    "src/**/*"
+  ]
+}

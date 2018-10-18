@@ -1,0 +1,33 @@
+.navbar {
+  @apply fixed pin-x pin-t;
+  @apply flex items-stretch justify-center;
+  z-index: map-get($zindex, header);
+  height: .88rem;
+  background-color: #F8F8F8;
+
+  .navbar-action-back {
+    @apply absolute pin-y pin-l;
+    @apply flex items-center justify-center;
+    @include touch-feedback;
+    width: 0.8rem;
+    > svg {
+      transform: rotateZ(180deg);
+    }
+  }
+
+  .navbar-title {
+    flex: 0 0 3.5rem;
+    line-height: 0.88rem;
+    text-align: center;
+    color: #3C3D45;
+    font-size: .36rem;
+    font-weight: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+body.has-navbar {
+  padding-top: 0.88rem;
+}

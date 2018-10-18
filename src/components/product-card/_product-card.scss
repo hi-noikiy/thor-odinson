@@ -1,0 +1,43 @@
+@import '../../styles/variables';
+.product-card-container {
+  width: 3.45rem;
+  height: 5.1rem;
+  box-sizing: border-box;
+  margin-bottom: 0.2rem;
+  .card {
+    display: flex;
+    width: 3.45rem;
+    height: 100%;
+    background: #FFFFFF;
+    border-radius: 6px;
+    flex-direction: column;
+    font-family: 'PingFang SC';
+    .img {
+      height: 3.45rem;
+      width: 3.45rem;
+      border-top-right-radius: 6px;
+      border-top-left-radius: 6px;
+    }
+    .summary {
+      box-sizing: border-box;
+      padding: 0.3rem 0.3rem 0;
+      .title {
+        font-size: 13px;
+        line-height: 17px;
+        max-height: 34px;
+        color: #778095;
+        font-weight: normal;
+        overflow : hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      .price {
+        margin-top: .1rem;
+        font-size: .26rem;
+        color: #F54304;
+      }
+    }
+  }
+}

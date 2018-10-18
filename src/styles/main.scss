@@ -1,0 +1,80 @@
+@tailwind preflight;
+@tailwind components;
+@tailwind utilities;
+
+@import './variables';
+@import './resets';
+@import './mixin';
+
+@import '../pages/auth/auth';
+@import '../pages/cart/cart';
+@import '../pages/checkout/checkout';
+@import '../pages/create-recipient/create-recipient';
+@import '../pages/help-center/help-center';
+@import '../pages/home/home';
+@import '../pages/order/order';
+@import '../pages/page/page';
+@import '../pages/product/product';
+@import '../pages/recipient-search/recipient-search';
+@import '../pages/recipient/recipient';
+@import '../pages/recipients/recipients';
+@import '../pages/settings/settings';
+@import '../pages/modify-password/modify-password';
+@import '../pages/user-center/user-center';
+
+@import '../components/button/button';
+@import '../components/alert/alert';
+@import '../components/buy-button/buy-button';
+@import '../components/order-status-bar/order-status-bar';
+@import '../components/cart-line-add/cart-line-add';
+@import '../components/cart-line/cart-line';
+@import '../components/checkbox/checkbox';
+@import '../components/checkout-line/checkout-line';
+@import '../components/common/button';
+@import '../components/common/tabs';
+@import '../components/empty-state/empty-state';
+@import '../components/floating-text-field/floating-text-field';
+@import '../components/icons/icons';
+@import '../components/image-link/image-link';
+@import '../components/image/image';
+@import '../components/components-list/component-list';
+@import '../components/input/input';
+@import '../components/loading-modal/loading-modal';
+@import '../components/modal/modal';
+@import '../components/money/money';
+@import '../components/navbar/navbar';
+@import '../components/non-ideal-state/non-ideal-state';
+@import '../components/order-list/order-list';
+@import '../components/overlay/overlay';
+@import '../components/product-card/product-card';
+@import '../components/product-provider/product-provider';
+@import '../components/quantity-input/quantity-input';
+@import '../components/recipient-search-line/recipient-search-line';
+@import '../components/swiper/swiper';
+@import '../components/tab/tab';
+@import '../components/tag/tag';
+@import '../components/toast/toast';
+
+html, body {
+  background-color: #f4f6f8;
+}
+
+body {
+  font-size: .28rem;
+}
+
+#root {
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.ptr--ptr {
+  background-color: transparent;
+  > * {
+    box-shadow: none;
+  }
+}

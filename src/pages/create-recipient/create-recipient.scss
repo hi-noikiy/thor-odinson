@@ -1,0 +1,94 @@
+.create-recipient {
+  @apply bg-white;
+  height: 100vh;
+  .floating-choose-flied {
+    @apply flex;
+    overflow: hidden;
+    padding: 0 0.4rem;
+    min-height: 1.32rem;
+    border-bottom: 1px solid rgba(#c0becd, .3);
+    > label {
+      @apply relative;
+      flex: 5;
+      z-index: 100;
+      color: $gray1;
+      min-height: 0.32rem;
+      font-size: 0.16rem;
+    }
+    .area {
+      @apply flex flex-col;
+      flex: 5;
+      min-height: 0.32rem;
+      line-height: 0.4rem;
+      color: $gray1;
+      font-size: 0.16rem;
+      padding-top: 0.24rem;
+      .area-size {
+        padding-bottom: 0.3rem;
+        font-size: 0.32rem;
+      }
+    }
+    .lable-big {
+      top: 0.5rem;
+      font-size: 0.34rem;
+      transition: all 0.3s;
+    }
+    .lable-small {
+      top: 0.24rem;
+      font-size: 0.24rem;
+      transition: all 0.3s;
+    }
+    .right-color {
+      color: $gray3;
+    }
+    span {
+      @apply flex;
+      align-items: center;
+    }
+  }
+  .is-default {
+    @apply flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.32rem;
+    color: $gray1;
+    .small-button {
+      border-radius: 4px;
+      width: 1.36rem;
+      height: .56rem;
+      color: $black;
+      font-size: .24rem;
+      margin-left: .8rem;
+      margin-right: .4rem;
+      box-shadow: none;
+      text-align: center;
+      line-height: .56rem;
+    }
+    .info-btn {
+      border: 1px solid $gray5;
+      background-color: #fff;
+      color: $black;
+    }
+    &.update {
+      justify-content: flex-end
+    }
+  }
+  .bottom-container {
+    width: 80%;
+    margin: 0 10%;
+    display: flex;
+    position: fixed;
+    left: 0;
+    bottom: .3rem;
+    background-image: linear-gradient(
+      -180deg,
+      rgba(255, 255, 255, 0) 19%,
+      #fff 50%
+    );
+  }
+  .to-save-recipient {
+    @apply fixed;
+    width: 80%;
+    bottom: 0.3rem;
+  }
+}

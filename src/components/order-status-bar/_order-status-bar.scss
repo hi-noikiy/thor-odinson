@@ -1,0 +1,71 @@
+
+.order-status-bar-container {
+  @apply flex flex-row items-center justify-center;
+  height: 90px;
+  width: 100%;
+  background: #1089EF;
+  .text {
+    @apply flex justify-center;
+    color: #FFFFFF;
+    font-size: .5rem;
+    .order-status-icon {
+      margin-right: .13rem;
+    }
+  }
+  .bar {
+    @apply flex flex-row;
+    .dot-line {
+      @apply flex items-center;
+      padding-bottom: 16px;
+      .dot {
+        @apply relative;
+        margin: 0 .04rem;
+        background: #ADD6F9;
+        width: .2rem;
+        height: .2rem;
+        border-radius: 50%;
+        span {
+          @apply absolute text-center;
+          width: 1rem;
+          bottom: -34px;
+          left: 50%;
+          transform: translateX(-50%);
+          color: #ADD6F9;
+          font-size: .24rem;
+        }
+        &.complete {
+          background: #FFFFFF;
+          span {
+            color: #FFFFFF;
+          }
+        }
+        &.current {
+          background: transparent;
+          margin: 0 .24rem;
+          span {
+            color: #FFFFFF;
+          }
+          .icon {
+            @apply absolute;
+            margin-left: 50%;
+            margin-top: 50%;
+            transform: translate(-50%, -50%);
+            font-size: .6rem;
+            color: #FFFFFF;
+          }
+        }
+      }
+      .line {
+        height: 2px;
+        width: 1.2rem;
+        background: #ADD6F9;
+        &.complete {
+          background: #FFFFFF;
+        }
+        &.short {
+          width: 1rem;
+        }
+      }
+    }
+  }
+}

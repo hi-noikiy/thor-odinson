@@ -1,0 +1,38 @@
+@import '../../styles/variables';
+
+.tab-container {
+  @apply flex flex-col h-full;
+  flex: 1 1 0;
+}
+
+.tab-content {
+  flex: 1 1 0;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tab-bar {
+  @apply fixed pin-x pin-b flex items-stretch bg-white;
+  z-index: map-get($zindex, tabbar);
+  padding: 0 .225rem;
+  box-shadow: 0 .04rem .3rem 0 rgba(0,0,0,0.10);
+  padding-bottom: env(safe-area-inset-bottom);
+
+  > a {
+    @apply flex flex-col items-center justify-center h-4;
+    @apply flex-1;
+    @apply text-center;
+    
+    color: $gray5;
+    font-size: .46rem;
+
+    &.active {
+      color: $blue;
+    }
+  }
+}
+
+body.has-tabbar {
+  padding-bottom: 1rem;
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+}

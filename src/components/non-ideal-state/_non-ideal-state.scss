@@ -1,0 +1,7 @@
+@import '../../styles/variables';
+.non-ideal-state {
+  @apply flex flex-col items-center justify-center text-center w-full;
+  > * {
+    @apply mt-1;
+  }
+}

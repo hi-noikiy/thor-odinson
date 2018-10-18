@@ -1,0 +1,44 @@
+.quantity-input {
+  @apply inline-flex items-stretch;
+
+  width: 2.48rem;
+  height: 0.7rem;
+  border: 1px solid #C0BECD;
+  border-radius: .06rem;
+
+  > button {
+    flex: 0 0 .76rem;
+    @apply flex items-center justify-center;
+    font-size: 0.12rem;
+    color: $black1;
+    &:first-of-type {
+      border-right: 1px solid #C0BECD;
+    }
+    &:last-of-type {
+      border-left: 1px solid #C0BECD;
+    }
+    &:focus {
+      outline: none;
+    }
+    &:disabled {
+      color: #B3B7BD;
+    }
+  }
+  input {
+    flex: 1 auto;
+    @apply text-center;
+    width: 0.76rem;
+    font-size: 0.32rem;
+  }
+
+  &.size-small {
+    width: 2.08rem;
+    height: 0.6rem;
+    > button {
+      flex: 0 0 .66rem;
+    }
+    input {
+      font-size: 0.3rem;
+    }
+  }
+}

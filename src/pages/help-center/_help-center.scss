@@ -1,0 +1,65 @@
+.help-center-page {
+  @include scroll-page-container;
+  background-color: #f4f6f8;
+  
+  &.help-center-content {
+    h2, h3 {
+      margin-top: 0.4rem;
+      margin-bottom: 0.3rem;
+      font-weight: normal;
+    }
+    
+    &.qa {
+      h4 {
+        margin-top: 0.4rem;
+        margin-bottom: 0.16rem;
+        font-size: 0.32rem;
+        font-weight: normal;
+        color: #3C3D45;
+      }
+    }
+
+    p {
+      font-size: 0.28rem;
+      line-height: 0.4rem;
+      color: #50555F;
+      margin-bottom: 0.3rem;
+      font-weight: 100;
+    }
+
+    ul {
+      font-size: .28rem;
+      line-height: .4rem;
+      color: #50555F;
+      li {
+        margin-bottom: 0.16rem;
+        font-weight: 100;
+      }
+    }
+  }
+}
+
+.help-center-content {
+  padding: 0 0.4rem 0 .4rem;
+  background-color: #fff;
+}
+
+.list-view {
+  padding-bottom: .7rem;
+  background-color: #fff;
+  > li {
+    margin-bottom: 0;
+    border-bottom: 1px solid #E2E4EB;
+    font-size: 0.32rem;
+    > a {
+      @apply flex items-center justify-between;
+      padding: .33rem .4rem;
+      color: #50555F;
+      font-weight: normal;
+      > svg {
+        @apply text-grey;
+        margin-left: .2rem;
+      }
+    }
+  }
+}
