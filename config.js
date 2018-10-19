@@ -8,7 +8,7 @@ module.exports = {
     "oauth2Conn": "h5_starterkit",
     "wxAuthId": "shansong_wxoauth",
     "smsAuthConn": "36kr_sms",
-    "publicId": "36kr_h5",
+    "publicId": "36kr_wap",
     "lbs": {
       "token": "vvXFQ0rUvDCjUkUztZtkwFukao8DrZx1",
       "uri": {
@@ -26,7 +26,7 @@ module.exports = {
     "oauth2Conn": "h5_starterkit",
     "wxAuthId": "shansong_wxoauth",
     "smsAuthConn": "36kr_sms",
-    "publicId": "36kr_h5",
+    "publicId": "36kr_wap",
     "lbs": {
       "token": "vvXFQ0rUvDCjUkUztZtkwFukao8DrZx1",
       "uri": {

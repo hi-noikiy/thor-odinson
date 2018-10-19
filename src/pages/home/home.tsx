@@ -36,7 +36,7 @@ export class HomePage extends React.Component<IHomePage> {
   public render() {
     const { storefrontStore } = this.props
     const landingPage = storefrontStore!.landingPage
-
+    console.log(storefrontStore)
     if (landingPage.loaded) {
       return (
         <div className="home-page">
